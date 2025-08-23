@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic 8 Ball</title>
+  <link rel="stylesheet" href="style\magic-8-ball.css">
+</head>
+<body>
+  <h1>Magic 8 Ball</h1>
+  <div>
+    <img src="images/8ball.png" alt="Magic Eight Ball" style="width:250px;height:250px"/>
+  </div>
+  <input type="text" id="question">
+  <button onclick="ask()">Ask</button>
+  <div id="answer"></div>
+  <script src="script\answers.js"></script>
+  <script>
+    function ask() {
+      var question = document.getElementById("question").value;
+      var answer = getAnswer(question);
+      document.getElementById("answer").innerHTML = answer;
+    }
+  </script>
+</body>
+</html>
